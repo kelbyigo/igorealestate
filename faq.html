@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — K&A Creative Investments LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: linear-gradient(to bottom, rgba(22,26,34,.9), rgba(22,26,34,.5));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+
+    .faq-item.open {
+      border-color: rgba(154,230,0,.15);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 28px;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      gap: 16px;
+      transition: color .2s;
+    }
+
+    .faq-question:hover { color: var(--green); }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--green-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .3s, background .3s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--green);
+    }
+
+    .faq-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--green);
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .faq-item.open .faq-icon svg {
+      stroke: #000;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .35s ease;
+      padding: 0 28px;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 28px 24px;
+    }
+
+    .faq-answer p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">K&amp;A Creative</a>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="subject-to.html" onclick="closeMenu()">Subject To</a></li>
+      <li><a href="seller-finance.html" onclick="closeMenu()">Seller Finance</a></li>
+      <li><a href="title-company.html" onclick="closeMenu()">Title Company</a></li>
+      <li><a href="faq.html" onclick="closeMenu()">FAQ</a></li>
+      <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+      <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="hero page-hero">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h1>Frequently Asked<br><span>Questions</span></h1>
+    <p>Direct answers to the most common questions about creative financing. If you don't see your question here, reach out — we're happy to talk.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="faq-list">
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is creative financing?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Creative financing refers to non-traditional ways of structuring a real estate purchase — like Subject-To or Seller Finance — that avoid the delays, conditions, and uncertainty of conventional bank-financed sales.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is this legal?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Both Subject-To and Seller Finance transactions are legal when properly disclosed and documented. Every deal closes through a licensed title company or closing attorney with a state-approved Purchase and Sale Agreement.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What's the difference between Subject-To and Seller Finance?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>In a Subject-To deal, we take over the seller's existing mortgage payments while the loan stays in the seller's name. In Seller Finance, the seller acts as the lender — receiving a down payment and either monthly payments or a deferred lump sum. Both options are handled through a licensed title company.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Will this affect the seller's credit?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>In a Subject-To, the loan remains on the seller's credit. On-time payments should preserve their credit history. In Seller Finance, the existing mortgage is paid off at closing, so it's removed from their credit entirely.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What about the due-on-sale clause?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Most loans include a due-on-sale clause that gives the lender the right to call the loan due if the property is transferred. While the clause exists in most loan agreements, lenders rarely enforce it as long as payments are being made on time. We are transparent about this with every seller and structure our deals to mitigate risk through timely payments and refinancing timelines.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How does the agent get paid?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>Listing-side commission is handled according to the seller's existing listing agreement. We represent ourselves as the buyer — there is no buyer's agent commission to negotiate.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Who pays closing costs?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>We pay all closing costs, title insurance, and transaction fees. The seller's only expense is their own listing agent commission — nothing else out of pocket.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How are payments tracked?
+          <span class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="0" x2="7" y2="14"/><line x1="0" y1="7" x2="14" y2="7"/></svg></span>
+        </button>
+        <div class="faq-answer">
+          <p>For Subject-To transactions, payments can be tracked through third-party loan servicing to provide documentation for both parties. For Seller Finance, payment terms are outlined in the recorded Promissory Note.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Still Have Questions?</span>
+      <h2 class="section-title">Let's <span>Talk</span></h2>
+      <p class="section-subtitle">Have a question that's not listed here? We're happy to walk through the process anytime — no pressure.</p>
+    </div>
+    <div style="text-align:center;" class="fade-in">
+      <a href="index.html#contact" class="btn">Get in Touch with Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span class="footer-brand">igorealestate.com</span>
+    <span>K&amp;A Creative Investments LLC</span>
+  </div>
+</footer>
+
+<script>
+  function closeMenu() { document.querySelector('.nav-links').classList.remove('open'); }
+
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    // Open clicked if it wasn't already open
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

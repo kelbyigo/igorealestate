@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Title Company — K&A Creative Investments LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">K&amp;A Creative</a>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="subject-to.html" onclick="closeMenu()">Subject To</a></li>
+      <li><a href="seller-finance.html" onclick="closeMenu()">Seller Finance</a></li>
+      <li><a href="title-company.html" onclick="closeMenu()">Title Company</a></li>
+      <li><a href="faq.html" onclick="closeMenu()">FAQ</a></li>
+      <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+      <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="hero page-hero">
+  <div class="container">
+    <span class="eyebrow">Title Company</span>
+    <h1>CLOSED<sup>&reg;</sup> Title<br><span>Title Reinvented.</span></h1>
+    <p>We partner with CLOSED&reg; Title for a seamless, technology-driven closing experience — from contract to keys.</p>
+    <a href="https://www.closedtitle.com" target="_blank" rel="noopener" class="btn">Visit CLOSED&reg; Title</a>
+  </div>
+</section>
+
+<!-- ABOUT CLOSED -->
+<section style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Our Partner</span>
+      <h2 class="section-title">Why <span>CLOSED<sup>&reg;</sup></span> Title?</h2>
+      <p class="section-subtitle">A recognized and trusted name in the real estate industry.</p>
+    </div>
+    <div class="content-card fade-in" style="max-width:800px; margin:0 auto;">
+      <p>CLOSED&reg; was built from the ground up with one vision: creating <span class="highlight">exceptional, technology-driven closing experiences</span> with local expertise nationwide.</p>
+      <p>Every K&amp;A Creative Investments deal closes through CLOSED&reg; Title — giving our sellers and agents a smooth, professional experience from start to finish.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">The Process</span>
+      <h2 class="section-title">How <span>Closing</span> Works</h2>
+      <p class="section-subtitle">With CLOSED&reg; Title, you choose how you close — across the US.</p>
+    </div>
+    <div class="steps" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="step fade-in">
+        <div class="step-num">1</div>
+        <h3>Submit Your Contract</h3>
+        <p>Email your contract to CLOSED&reg; Title and they begin processing immediately — no delays.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">2</div>
+        <h3>Digital EMD</h3>
+        <p>Say goodbye to paper checks. Earnest money deposits are handled 100% digitally for a faster, more secure process.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">3</div>
+        <h3>Close Your Way</h3>
+        <p>Close from anywhere — online 24/7, at a modern local office, or via mobile notary. Commissions sent via free wire transfer or check at closing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Features</span>
+      <h2 class="section-title">What Sets Them <span>Apart</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="why-icon">&#x1f4bb;</div>
+        <h3>Technology-Driven</h3>
+        <p>Modern, digital-first closing experiences. Everything from EMD to final documents is streamlined through technology.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">&#x1f30e;</div>
+        <h3>Nationwide Coverage</h3>
+        <p>CLOSED&reg; Title operates across the US, so no matter where the property is located, the closing experience is consistent and professional.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">&#x1f552;</div>
+        <h3>Close Online 24/7</h3>
+        <p>Close from anywhere, anytime — online, at a local office, or via mobile notary. Flexibility built around your schedule.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="why-icon">&#x1f4b8;</div>
+        <h3>Fast Commissions</h3>
+        <p>Agent commissions sent via free wire transfer or check at closing. No waiting, no extra fees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Get Started</span>
+      <h2 class="section-title">Questions About <span>Closing</span>?</h2>
+      <p class="section-subtitle">We're happy to walk through the process anytime. Reach out and we'll explain exactly how your closing will work.</p>
+    </div>
+    <div style="text-align:center; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="fade-in">
+      <a href="index.html#contact" class="btn">Contact K&amp;A Creative</a>
+      <a href="https://www.closedtitle.com" target="_blank" rel="noopener" class="btn btn-outline">Learn More About CLOSED&reg;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span class="footer-brand">igorealestate.com</span>
+    <span>K&amp;A Creative Investments LLC</span>
+  </div>
+</footer>
+
+<script>
+  function closeMenu() { document.querySelector('.nav-links').classList.remove('open'); }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

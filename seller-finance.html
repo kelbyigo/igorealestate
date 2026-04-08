@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Finance — K&A Creative Investments LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">K&amp;A Creative</a>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="subject-to.html" onclick="closeMenu()">Subject To</a></li>
+      <li><a href="seller-finance.html" onclick="closeMenu()">Seller Finance</a></li>
+      <li><a href="title-company.html" onclick="closeMenu()">Title Company</a></li>
+      <li><a href="faq.html" onclick="closeMenu()">FAQ</a></li>
+      <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+      <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="hero page-hero">
+  <div class="container">
+    <span class="eyebrow">Seller Finance</span>
+    <h1>Creative Financing.<br><span>Tailored to You.</span></h1>
+    <p>We structure our financing to what works best for the seller. Choose from a large down payment with deferred payments, or traditional monthly payments.</p>
+    <a href="index.html#contact" class="btn">Get Started</a>
+  </div>
+</section>
+
+<!-- TWO OPTIONS OVERVIEW -->
+<section style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Two Options</span>
+      <h2 class="section-title">Choose Your <span>Structure</span></h2>
+      <p class="section-subtitle">We tailor our financing structure to what works best for the seller.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">&#x1f4b5;</div>
+        <h3>Option A</h3>
+        <p>Larger down payment with deferred payments. Two-stage close with 40-60% down at COE.</p>
+        <a href="#option-a" class="btn btn-outline">Details Below</a>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">&#x1f4c5;</div>
+        <h3>Option B</h3>
+        <p>Traditional seller finance with monthly payments. 5-20% down payment secured by Deed of Trust.</p>
+        <a href="#option-b" class="btn btn-outline">Details Below</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPTION A -->
+<section id="option-a" style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Option A</span>
+      <h2 class="section-title">Larger Down Payment, <span>Deferred</span> Payments</h2>
+      <p class="section-subtitle">A two-stage close, both handled through a licensed title company and a state-approved PSA.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="content-card fade-in">
+        <h3>Stage One — Large Down Payment at COE</h3>
+        <p>We close with a large down payment in cash, contingent on appraisal. You receive a <span class="highlight">40-60% down payment</span> at close of escrow.</p>
+        <p>The title company holds the remaining balance in escrow while we complete Stage Two. Title transfers to the buyer, a title policy is issued, and we pay all closing costs and premiums.</p>
+      </div>
+      <div class="content-card fade-in">
+        <h3>Stage Two — Seller Equity Agreement</h3>
+        <p>The remaining balance is secured by naming you as a <span class="highlight">minority equity partner</span> in the buyer's LLC — the entity that holds title to the property.</p>
+        <p><span class="highlight">There are no monthly payments.</span> All payments and interest are deferred until the balloon matures, at which point you receive a lump sum covering the remaining principal plus all deferred interest.</p>
+        <p>A second title policy is issued at the buyer's expense. Because this is structured as an installment sale, you may be able to spread your gains across multiple tax years.</p>
+      </div>
+    </div>
+
+    <div class="content-card fade-in" style="max-width:800px; margin:24px auto 0;">
+      <h3>&#x1f6e1; Seller Protection</h3>
+      <p>Because you hold a minority equity interest in the LLC that owns the property, if the buyer defaults on any obligation you <span class="highlight">automatically assume full ownership</span> of the LLC — and the property — without foreclosure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPTION B -->
+<section id="option-b" style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Option B</span>
+      <h2 class="section-title">Traditional Seller Finance, <span>Monthly</span> Payments</h2>
+    </div>
+    <div class="content-card fade-in" style="max-width:800px; margin:0 auto;">
+      <p>A straightforward seller-financed transaction. The seller receives a <span class="highlight">5-20% down payment</span> at close of escrow, secured by a recorded Deed of Trust/Mortgage and Promissory Note.</p>
+      <p>The seller then receives <span class="highlight">monthly payments</span> for the life of the note. At the maturity of the balloon, the seller receives a lump sum for the remaining balance.</p>
+      <p>We cover all closing costs and premiums.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLIES TO BOTH -->
+<section style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Both Options</span>
+      <h2 class="section-title">What <span>Applies</span> to Both</h2>
+    </div>
+    <div class="two-col">
+      <div class="content-card fade-in">
+        <h3>&#x1f4ca; Tax Benefits</h3>
+        <p>Both options are structured as <span class="highlight">installment sales</span>, allowing the seller to spread gains across multiple tax years instead of recognizing everything at once (per IRS Publication 537).</p>
+        <p>We recommend the seller consult their own tax advisor.</p>
+      </div>
+      <div class="content-card fade-in">
+        <h3>&#x1f4b0; Costs</h3>
+        <p><span class="highlight">We pay all closing costs</span>, title insurance, and transaction fees — you pay nothing out of pocket. The seller's only expense is their own listing agent commission.</p>
+        <p>After closing, we are responsible for all carrying costs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY TERMS -->
+<section style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Details</span>
+      <h2 class="section-title">Key <span>Terms</span></h2>
+    </div>
+    <div class="content-card fade-in" style="max-width:800px; margin:0 auto;">
+      <ul>
+        <li><span class="highlight">As-is purchase</span> — no repairs, credits, or concessions from the seller</li>
+        <li><span class="highlight">Due diligence period</span> — buyer inspects, reviews title, confirms zoning; may terminate if unsatisfied</li>
+        <li><span class="highlight">Buyer assumes all existing tenancies</span> at closing</li>
+        <li><span class="highlight">Balloon payment</span> — balance due at a specified term, with extension options by mutual agreement</li>
+        <li><span class="highlight">No prepayment penalty</span></li>
+        <li>Seller provides standard disclosures and property documentation during due diligence</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Next Step</span>
+      <h2 class="section-title">Ready to <span>Talk</span>?</h2>
+      <p class="section-subtitle">Happy to walk through the process anytime. No pressure, just answers.</p>
+    </div>
+    <div style="text-align:center;" class="fade-in">
+      <a href="index.html#contact" class="btn">Get in Touch with Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span class="footer-brand">igorealestate.com</span>
+    <span>K&amp;A Creative Investments LLC</span>
+  </div>
+</footer>
+
+<script>
+  function closeMenu() { document.querySelector('.nav-links').classList.remove('open'); }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
