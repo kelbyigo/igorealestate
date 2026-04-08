@@ -646,16 +646,21 @@ footer .footer-brand { color: var(--green); font-weight: 600; font-size: 0.85rem
   color: var(--gray);
 }
 
-/* ── FADE-IN ANIMATION ───────────────────────────── */
+/* ── SCROLL ANIMATION ───────────────────────────── */
 .fade-in {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateX(60px);
   transition: opacity .6s ease, transform .6s ease;
 }
 
 .fade-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
+}
+
+.fade-in.slide-out {
+  opacity: 0;
+  transform: translateX(-60px);
 }
 
 /* ── TWO-COL LAYOUT (subpages) ───────────────────── */

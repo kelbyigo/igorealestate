@@ -202,8 +202,19 @@
 
 <script>
   function closeMenu() { document.querySelector('.nav-links').classList.remove('open'); }
+  let lastScroll = window.scrollY;
+  window.addEventListener('scroll', () => { lastScroll = window.scrollY; });
+
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.classList.remove('slide-out');
+      } else if (entry.target.classList.contains('visible')) {
+        entry.target.classList.remove('visible');
+        entry.target.classList.add('slide-out');
+      }
+    });
   }, { threshold: 0.15 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
