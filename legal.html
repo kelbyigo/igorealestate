@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal — K&A Creative Investments LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">K&amp;A Creative</a>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="subject-to.html" onclick="closeMenu()">Subject To</a></li>
+      <li><a href="seller-finance.html" onclick="closeMenu()">Seller Finance</a></li>
+      <li><a href="title-company.html" onclick="closeMenu()">Title Company</a></li>
+      <li><a href="faq.html" onclick="closeMenu()">FAQ</a></li>
+      <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+      <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="hero page-hero">
+  <div class="container">
+    <span class="eyebrow">Legal</span>
+    <h1>Terms of Use &amp;<br><span>Privacy Policy</span></h1>
+    <p>Educational content, disclaimer information, and our privacy statement.</p>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section style="background:var(--bg-alt);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Terms of Use</span>
+      <h2 class="section-title"><span>Disclaimer</span></h2>
+    </div>
+    <div class="content-card fade-in" style="max-width:800px; margin:0 auto;">
+      <p>The information on this site is provided for educational purposes only and does not constitute legal, tax, or financial advice. Subject-To and Seller Finance transactions involve risks and should be reviewed with licensed professionals.</p>
+      <p>We make no guarantees about outcomes or lender decisions. By using this site, you agree to verify information with your own advisors and rely on official documents for decision-making.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY POLICY -->
+<section style="background:var(--bg);">
+  <div class="section-glow"></div>
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Privacy</span>
+      <h2 class="section-title">Your <span>Privacy</span></h2>
+    </div>
+    <div class="content-card fade-in" style="max-width:800px; margin:0 auto;">
+      <p>This website is informational only. We do not use lead capture forms and do not sell personal information. If you contact us directly by phone or email, we use that information solely to respond to your inquiry.</p>
+      <p>We may update this page as needed. For questions about privacy, email <a href="mailto:kelby@igorealestate.com" style="color:var(--green);">kelby@igorealestate.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-full">
+    <div class="footer-top">
+      <div class="footer-col">
+        <span class="footer-brand">igorealestate.com</span>
+        <span class="footer-company">K&amp;A Creative Investments LLC</span>
+      </div>
+      <div class="footer-col">
+        <span class="footer-heading">Contact</span>
+        <a href="tel:9287567689" class="footer-link">(928) 756-7689</a>
+        <a href="mailto:kelby@igorealestate.com" class="footer-link">kelby@igorealestate.com</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-heading">Legal</span>
+        <a href="legal.html" class="footer-link">Privacy Policy</a>
+        <a href="legal.html" class="footer-link">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 K&amp;A Creative Investments LLC. All rights reserved.</p>
+      <p>Information provided for educational purposes only.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function closeMenu() { document.querySelector('.nav-links').classList.remove('open'); }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
