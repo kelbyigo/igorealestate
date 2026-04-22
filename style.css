@@ -717,3 +717,44 @@ footer .footer-brand { color: var(--green); font-weight: 600; font-size: 0.85rem
   .steps { grid-template-columns: 1fr; }
   .about-photo { height: 300px; }
 }
+
+/* PDF Banner */
+.pdf-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-left: 3px solid var(--green);
+  border-radius: var(--radius);
+  padding: 24px 32px;
+}
+.pdf-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.pdf-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.pdf-banner-text div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pdf-banner-text strong {
+  color: var(--white);
+  font-size: 1.05rem;
+  font-family: 'Manrope', sans-serif;
+}
+.pdf-banner-text span {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+  .pdf-banner { flex-direction: column; align-items: flex-start; }
+  .pdf-banner .btn { width: 100%; text-align: center; }
+}
